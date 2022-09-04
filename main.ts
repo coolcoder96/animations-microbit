@@ -117,7 +117,7 @@ function Play_ani_1 () {
     basic.clearScreen()
 }
 input.onButtonPressed(Button.AB, function () {
-	
+    ani_3()
 })
 input.onButtonPressed(Button.B, function () {
     ani_2()
@@ -125,6 +125,129 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
 	
 })
+function ani_3 () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . . . . .
+        . # # # .
+        . # . # .
+        . # # # .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # # # # #
+        # . . . #
+        # . # . #
+        # . . . #
+        # # # # #
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . . . . .
+        . # # # .
+        . # . # .
+        . # # # .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # # # # #
+        # . . . #
+        # . # . #
+        # . . . #
+        # # # # #
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . . # . #
+        . . . . .
+        # . . . #
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        # . . . #
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        # . . . .
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        # . . . .
+        . . . . .
+        # . # . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        # . . . .
+        . . . . .
+        # . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        # . . . .
+        . . . . .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        # . # . .
+        . . . . .
+        . . . . .
+        . # # . .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . # . # .
+        . . . . .
+        . . . . .
+        . # # . .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        . . . . .
+        `)
+    basic.pause(time2)
+    basic.showLeds(`
+        . # . # .
+        . . . . .
+        # . . . #
+        # . . . #
+        . # # # .
+        `)
+    basic.pause(time2)
+    basic.clearScreen()
+}
 function ani_2 () {
     basic.showLeds(`
         . . . . .
