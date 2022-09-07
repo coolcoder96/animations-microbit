@@ -120,8 +120,10 @@ function Play_ani_1 () {
     basic.clearScreen()
 }
 input.onButtonPressed(Button.AB, function () {
-    radio.sendString("ani3")
-    ani_3()
+    if (ani4_play == 1) {
+        radio.sendString("ani3")
+        ani_3()
+    }
 })
 radio.onReceivedString(function (receivedString) {
     radio2 = receivedString
@@ -537,9 +539,10 @@ let ani4_play = 0
 let time3 = 0
 let time2 = 0
 let time1 = 0
+basic.pause(5000)
 radio.setGroup(1)
 time1 = 1e-100
 time2 = 1e-100
 time3 = 200
 ani4_play = 2
-time4 = 100
+time4 = 10
