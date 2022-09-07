@@ -2,6 +2,7 @@ input.onButtonPressed(Button.A, function () {
     if (ani4_play == 0) {
     	
     } else {
+        radio.sendString("ani1")
         Play_ani_1()
     }
 })
@@ -224,12 +225,31 @@ function ani_4 () {
     }
 }
 input.onButtonPressed(Button.AB, function () {
+    radio.sendString("ani3")
     ani_3()
 })
+radio.onReceivedString(function (receivedString) {
+    radio2 = receivedString
+    if ("ani1" == radio2) {
+        Play_ani_1()
+    } else if ("ani2" == radio2) {
+        ani_2()
+    } else if ("ani3" == radio2) {
+        ani_3()
+    } else if ("ani4" == radio2) {
+        ani_4()
+    }
+})
 input.onButtonPressed(Button.B, function () {
-    ani_2()
+    if (ani4_play == 0) {
+    	
+    } else {
+        radio.sendString("ani2")
+        ani_2()
+    }
 })
 input.onGesture(Gesture.Shake, function () {
+    radio.sendString("ani4")
     ani_4()
 })
 function ani_3 () {
@@ -512,16 +532,15 @@ function ani_2 () {
     basic.pause(time2)
     basic.clearScreen()
 }
+let radio2 = ""
 let time4 = 0
 let ani4_play = 0
 let time3 = 0
 let time2 = 0
 let time1 = 0
+radio.setGroup(1)
 time1 = 1e-100
 time2 = 1e-100
 time3 = 200
 ani4_play = 2
-time4 = 300
-basic.forever(function () {
-	
-})
+time4 = 100
