@@ -136,7 +136,7 @@ radio.onReceivedString(function (receivedString) {
     } else if ("ani4" == radio2) {
         ani_4()
     } else if ("ani4stop" == radio2) {
-        ani4_play = 1
+        ani4_play = 2
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -539,10 +539,9 @@ let ani4_play = 0
 let time3 = 0
 let time2 = 0
 let time1 = 0
-basic.pause(5000)
 radio.setGroup(1)
 time1 = 1e-100
 time2 = 1e-100
 time3 = 200
-ani4_play = 2
+ani4_play = 1
 time4 = 10
